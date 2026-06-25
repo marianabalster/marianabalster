@@ -131,95 +131,100 @@ footer p{font-size:14px;color:#aaa;font-weight:500}
 }
 
 /* ── MOBILE ── */
-@media (max-width: 768px) {
-  * { box-sizing: border-box; }
 
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+
+  /* NAV */
   nav { padding: 0 20px; height: 56px; }
-  .nav-logo { font-size: 14px; }
   .nav-links { display: none !important; }
   .nav-links.open {
-    display: flex !important; flex-direction: column;
-    position: fixed; top: 56px; left: 0; right: 0; bottom: 0;
-    background: #fff; z-index: 998;
-    padding: 32px 24px; gap: 24px;
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    top: 56px; left: 0; right: 0; bottom: 0;
+    background: #fff;
+    z-index: 998;
+    padding: 40px 24px;
+    gap: 28px;
   }
-  .nav-links.open li a {
-    font-size: 28px; font-weight: 500; opacity: 1; display: block;
-  }
+  .nav-links.open li { list-style: none; }
+  .nav-links.open li a { font-size: 26px; font-weight: 500; opacity: 1; display: block; cursor: pointer; }
   .nav-burger { display: flex !important; }
   .page { padding-top: 56px; }
 
-  /* HOME */
-  .hero { padding: 32px 20px 32px; gap: 16px; }
-  .hero-avatar { width: 56px; height: 56px; margin-bottom: 4px; }
-  .hero h1 { font-size: 32px; letter-spacing: -0.5px; line-height: 120%; max-width: 100%; }
-  .hero-body { font-size: 15px; max-width: 100%; }
+  /* HOME HERO */
+  .hero { padding: 28px 20px; gap: 14px; }
+  .hero-avatar { width: 52px; height: 52px; margin-bottom: 0; }
+  .hero h1 { font-size: 28px !important; letter-spacing: -0.3px; line-height: 118%; max-width: 100%; }
+  .hero-body { font-size: 14px; max-width: 100%; line-height: 1.6em; }
 
-  .selected-projects { padding: 16px 20px 40px; }
-  .selected-projects h2 { font-size: 28px; margin-bottom: 24px; }
-  .projects-grid { grid-template-columns: 1fr !important; gap: 24px; }
-  .project-card-title { font-size: 18px; }
-  .project-card-body { padding: 14px 0 0; }
+  /* PROJECTS */
+  .selected-projects { padding: 12px 20px 36px; }
+  .selected-projects h2 { font-size: 24px !important; margin-bottom: 20px; }
+  .projects-grid { grid-template-columns: 1fr !important; gap: 20px; }
+  .project-card-title { font-size: 17px; }
+  .project-card-sub { font-size: 13px; }
+  .project-card-body { padding: 12px 0 0; gap: 6px; }
 
-  .cta-section { margin: 0 20px 48px; padding: 32px 20px; }
-  .cta-section h2 { font-size: 22px; }
+  /* CTA */
+  .cta-section { margin: 0 20px 40px; padding: 28px 20px; }
+  .cta-section h2 { font-size: 20px; }
   .cta-section p { font-size: 14px; }
 
-  footer { padding: 28px 20px; flex-direction: column; gap: 12px; }
+  /* FOOTER */
+  footer { padding: 24px 20px; flex-direction: column; gap: 12px; }
   .footer-links { flex-wrap: wrap; gap: 12px; }
-  .footer-links a { font-size: 13px; }
-  footer p { font-size: 13px; }
+  footer p, .footer-links a { font-size: 13px; }
 
   /* PROJECT HEADER */
-  .project-header { padding: 24px 20px 20px; max-width: 100%; }
-  .project-header h1 { font-size: 26px; letter-spacing: -0.3px; line-height: 120%; margin-bottom: 10px; }
-  .project-header .subtitle { font-size: 14px; margin-bottom: 20px; }
-  .meta-row { flex-direction: column; border: 1px solid #eee; border-radius: 8px; overflow: hidden; }
-  .meta-box { border-right: none !important; border-bottom: 1px solid #eee; padding: 12px 16px; }
+  .project-header { padding: 20px 20px 16px; max-width: 100%; }
+  .project-header h1 { font-size: 24px !important; line-height: 118%; margin-bottom: 10px; }
+  .project-header .subtitle { font-size: 14px; margin-bottom: 16px; }
+  .meta-row { flex-direction: column; }
+  .meta-box { border-right: none !important; border-bottom: 1px solid #eee; padding: 10px 14px; }
   .meta-box:last-child { border-bottom: none; }
-  .meta-label { font-size: 11px; }
-  .meta-value { font-size: 14px; }
+  .meta-label { font-size: 10px; }
+  .meta-value { font-size: 13px; }
 
   /* PROJECT BODY */
-  .project-body { padding: 24px 20px 0; gap: 28px; max-width: 100%; }
-  .case-section { max-width: 100%; gap: 12px; }
-  .case-h2 { font-size: 22px; }
-  .project-text { font-size: 15px; line-height: 1.6em; }
-  .case-list li { font-size: 15px; }
+  .project-body { padding: 20px 20px 0; gap: 24px; max-width: 100%; }
+  .case-section { max-width: 100%; gap: 10px; }
+  .case-h2 { font-size: 20px !important; }
+  .project-text { font-size: 14px; line-height: 1.6em; }
+  .case-list li { font-size: 14px; }
 
   /* IMAGES */
   .diptych { flex-direction: column !important; height: auto !important; gap: 8px; }
-  .diptych > div { height: 200px !important; flex: none !important; width: 100%; }
+  .diptych > div { height: 180px !important; flex: none !important; width: 100% !important; }
   .triptych-row { flex-direction: column !important; height: auto !important; gap: 8px; }
-  .triptych-row > div { height: 180px !important; flex: none !important; width: 100%; }
-  .banner-img { height: 220px !important; }
-
-  .btn-prototype { font-size: 15px; padding: 12px 22px; }
+  .triptych-row > div { height: 160px !important; flex: none !important; width: 100% !important; }
+  .banner-img { height: 200px !important; }
+  .btn-prototype { font-size: 14px; padding: 11px 20px; }
 
   /* OTHER PROJECTS */
-  .other-section { padding: 32px 20px 48px; }
-  .other-section h2 { font-size: 26px; margin-bottom: 20px; }
-  .other-item { max-width: 100%; gap: 14px; padding: 18px 0; }
-  .other-thumb { width: 100px; height: 70px; }
-  .other-desc h3 { font-size: 15px; }
-  .other-desc p { font-size: 13px; }
+  .other-section { padding: 28px 20px 44px; }
+  .other-section h2 { font-size: 22px !important; margin-bottom: 16px; }
+  .other-item { max-width: 100%; gap: 12px; padding: 16px 0; }
+  .other-thumb { width: 90px !important; height: 64px !important; }
+  .other-desc h3 { font-size: 14px; }
+  .other-desc p { font-size: 12px; }
 
   /* ABOUT */
-  .about-header { padding: 24px 20px 40px; gap: 28px; }
-  .about-block { flex-direction: column !important; gap: 24px; }
-  .about-photo { width: 100% !important; height: 280px !important; border-radius: 10px; }
-  .about-text-right h1 { font-size: 26px !important; }
-  .about-text-right p { font-size: 15px; max-width: 100%; }
-  .about-sub { font-size: 16px; }
+  .about-header { padding: 20px 20px 36px; gap: 24px; }
+  .about-block { flex-direction: column !important; gap: 20px; }
+  .about-photo { width: 100% !important; height: 260px !important; border-radius: 10px; }
+  .about-text-right h1 { font-size: 24px !important; }
+  .about-text-right p { font-size: 14px; max-width: 100%; }
 
   /* RESUME */
-  .resume-header { padding: 24px 20px 40px; }
-  .resume-header h1 { font-size: 32px; margin-bottom: 24px; }
-  .resume-section { max-width: 100%; padding: 24px 0; }
-  .resume-section-title { font-size: 20px; margin-bottom: 14px; }
-  .resume-list { padding-left: 16px; gap: 8px; }
-  .resume-list li { font-size: 14px; }
-  .resume-exp-list p { font-size: 14px; }
+  .resume-header { padding: 20px 20px 36px; }
+  .resume-header h1 { font-size: 28px !important; margin-bottom: 20px; }
+  .resume-section { max-width: 100%; padding: 20px 0; }
+  .resume-section-title { font-size: 18px; margin-bottom: 12px; }
+  .resume-list li, .resume-exp-list p { font-size: 13px; }
 }
 
 @media (min-width: 769px) {
